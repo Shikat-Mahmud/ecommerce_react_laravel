@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longText('description');
             $table->tinyInteger('stock')->unsigned();
             $table->double('price');
-            $table->double('discounted_price');
+            $table->double('discounted_price')->nullable();
             $table->string('image')->nullable();
             $table->foreignIdFor(Category::class)->constrained();
             $table->foreignIdFor(Brands::class)->constrained();
