@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Brands;
+use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->double('discounted_price')->nullable();
             $table->string('image')->nullable();
             $table->foreignIdFor(Category::class)->constrained();
-            $table->foreignIdFor(Brands::class)->constrained();
+            $table->foreignIdFor(Brand::class)->constrained();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
